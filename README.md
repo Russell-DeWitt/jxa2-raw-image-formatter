@@ -3,3 +3,6 @@ This program uses the same GPU kernel functions that I use on the Jetson board. 
 The source code is self-documented.  So it should be easy to follow.
 
 ![image](https://github.com/user-attachments/assets/27eee28c-a7db-4d9a-af79-acfbaece0d60)
+
+Allied Vision's manufacturer description of camera: https://www.alliedvision.com/en/products/camera-series/alvium-1500-c-selector/?series=107 
+Allied Vision's github for Jetson camera driver:  https://github.com/alliedvision/linux_nvidia_jetson 

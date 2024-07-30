@@ -44,11 +44,15 @@
             textBox1 = new TextBox();
             groupBox3 = new GroupBox();
             groupBox4 = new GroupBox();
+            groupBox5 = new GroupBox();
+            radioButton_3x3demosaic = new RadioButton();
+            radioButton_2x2demosaic = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
+            groupBox5.SuspendLayout();
             SuspendLayout();
             // 
             // textBox_debug
@@ -65,9 +69,9 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(130, 23);
+            button1.Location = new Point(13, 24);
             button1.Name = "button1";
-            button1.Size = new Size(330, 53);
+            button1.Size = new Size(281, 53);
             button1.TabIndex = 1;
             button1.Text = "Open RAW File";
             button1.UseVisualStyleBackColor = true;
@@ -219,18 +223,57 @@
             // 
             groupBox4.Controls.Add(button1);
             groupBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox4.Location = new Point(12, 355);
+            groupBox4.Location = new Point(12, 357);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(665, 82);
+            groupBox4.Size = new Size(312, 82);
             groupBox4.TabIndex = 13;
             groupBox4.TabStop = false;
             groupBox4.Text = "Select the RAW file to be processed";
+            // 
+            // groupBox5
+            // 
+            groupBox5.Controls.Add(radioButton_3x3demosaic);
+            groupBox5.Controls.Add(radioButton_2x2demosaic);
+            groupBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox5.Location = new Point(342, 359);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(335, 78);
+            groupBox5.TabIndex = 14;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "Choose Demozaic Method";
+            // 
+            // radioButton_3x3demosaic
+            // 
+            radioButton_3x3demosaic.AutoSize = true;
+            radioButton_3x3demosaic.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            radioButton_3x3demosaic.Location = new Point(45, 47);
+            radioButton_3x3demosaic.Name = "radioButton_3x3demosaic";
+            radioButton_3x3demosaic.Size = new Size(117, 25);
+            radioButton_3x3demosaic.TabIndex = 1;
+            radioButton_3x3demosaic.TabStop = true;
+            radioButton_3x3demosaic.Text = "3x3 Demosic";
+            radioButton_3x3demosaic.UseVisualStyleBackColor = true;
+            radioButton_3x3demosaic.CheckedChanged += radioButton_3x3demosaic_CheckedChanged;
+            // 
+            // radioButton_2x2demosaic
+            // 
+            radioButton_2x2demosaic.AutoSize = true;
+            radioButton_2x2demosaic.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            radioButton_2x2demosaic.Location = new Point(45, 22);
+            radioButton_2x2demosaic.Name = "radioButton_2x2demosaic";
+            radioButton_2x2demosaic.Size = new Size(178, 25);
+            radioButton_2x2demosaic.TabIndex = 0;
+            radioButton_2x2demosaic.TabStop = true;
+            radioButton_2x2demosaic.Text = "2x2 Demosaic (faster)";
+            radioButton_2x2demosaic.UseVisualStyleBackColor = true;
+            radioButton_2x2demosaic.CheckedChanged += radioButton_2x2demosaic_CheckedChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(694, 684);
+            Controls.Add(groupBox5);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
@@ -247,6 +290,8 @@
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox4.ResumeLayout(false);
+            groupBox5.ResumeLayout(false);
+            groupBox5.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -267,5 +312,8 @@
         private GroupBox groupBox3;
         private GroupBox groupBox4;
         private CheckBox checkBox1;
+        private GroupBox groupBox5;
+        private RadioButton radioButton_3x3demosaic;
+        private RadioButton radioButton_2x2demosaic;
     }
 }
